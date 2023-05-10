@@ -25,7 +25,7 @@ namespace MyBanker
 			get { return customerAge; }
 
 		}
-		protected string accountNumber;
+		protected string accountNumber = "3520";
 
 		public string AccountNumber
 		{
@@ -43,13 +43,13 @@ namespace MyBanker
 
 		}
 		protected Random rnd = new Random();
+
 		protected Dictionary<int, string> prefixes = new Dictionary<int, string>();
 
 		public Card(string CustName, int CustAge)
 		{
 			customerName = CustName;
-			customerAge = CustAge;
-			accountNumber = "3520";
+			customerAge = CustAge;	
 			AddPrefixes();		
 
 
@@ -86,6 +86,7 @@ namespace MyBanker
 
 
 		}
+
 		public override string ToString()
 		{
 			return $"{GetType()} | Navn: {CustomerName} | Alder: {CustomerAge} | Kortnummer: {CardNumber} | Kontonummer: {AccountNumber} ";
